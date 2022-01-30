@@ -1,5 +1,18 @@
 let now = new Date();
 let currentDate = now.getDate();
+
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let currentDay = days[now.getDay()];
+
 let months = [
   "01",
   "02",
@@ -17,7 +30,7 @@ let months = [
 
 let currentMonth = months[now.getMonth()];
 let currentYear = now.getFullYear();
-let formattedDate = `Today | ${currentDate} / ${currentMonth} / ${currentYear}`;
+let formattedDate = `${currentDay}, ${currentDate}.${currentMonth}.${currentYear}.`;
 
 let date = document.querySelector("#date");
 date.innerHTML = formattedDate;
@@ -38,7 +51,6 @@ let lastUpdate = document.querySelector("#last-update");
 lastUpdate.innerHTML = currentTime;
 
 function displayWeatherCondition(response) {
-  console.log(response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML = Math.round(
     response.data.main.temp

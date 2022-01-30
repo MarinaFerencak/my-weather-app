@@ -1,38 +1,28 @@
 body {
-  margin: 20px 350px;
+  margin: 50px 400px;
   font-family: "Roboto", sans-serif;
   color: #5a6275;
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 25px;
   margin-top: 20px;
   margin-left: 60px;
   font-weight: 700;
-}
-
-p {
-  margin-left: 115px;
-  margin-bottom: 0;
-  font-size: 20px;
-}
-
-ul {
-  margin-top: 35px;
-  margin-bottom: 0;
-  font-size: 16px;
-  list-style: none;
-  margin-left: 30px;
 }
 
 a {
   text-decoration: none;
 }
 
+.card {
+  width: 700px;
+}
+
 .location-form,
 .search-button,
 .current-button {
-  font-size: 17px;
+  font-size: 13px;
   padding: 4px 20px;
   background: white;
   border: 2px solid #818183;
@@ -44,8 +34,8 @@ a {
 }
 
 .location-form {
-  margin-left: 100px;
-  right: -53px;
+  margin-left: 92px;
+  left: 20px;
 }
 
 .location-form:hover {
@@ -53,16 +43,14 @@ a {
 }
 
 .search-button {
-  right: -35px;
   background: #1ab5ed;
   color: white;
 }
 
 .current-button {
-  margin-right: 100px;
-  left: -34px;
   background: #1ab5ed;
   color: white;
+  right: 20px;
 }
 
 .search-button:hover,
@@ -79,28 +67,32 @@ a {
 #date {
   text-align: center;
   margin-top: 20px;
+  font-size: 15px;
 }
 
 .main-weather-icon {
-  width: 120px;
+  width: 80px;
   margin-left: 50px;
-  margin-top: 15px;
 }
 
 .current-temperature {
   display: inline-block;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
   position: relative;
-  bottom: -25px;
+  top: 15px;
 }
 
 .measuring-units {
   display: inline-block;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
-  position: relative;
-  top: -5px;
+}
+
+#weather-description {
+  margin-left: 115px;
+  margin-bottom: 0;
+  font-size: 16px;
 }
 
 #last-update {
@@ -109,22 +101,37 @@ a {
   margin-left: 88px;
 }
 
+.weather-elements {
+  margin-top: 35px;
+  margin-bottom: 0;
+  font-size: 14px;
+  list-style: none;
+  margin-left: 30px;
+}
+
 .week-days {
-  margin-left: 60px;
+  margin-left: 55px;
   margin-top: 40px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bold;
 }
 
 .forcast-icon {
-  width: 55px;
+  width: 35px;
   margin-left: 64px;
 }
 
 .forcast-temperatures {
-  margin-left: 57px;
+  margin-left: 53px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.lower-temperature {
+  color: #8f9bb6;
+  margin-left: 5px;
 }
 
 .coder {
-  font-size: 14px;
+  font-size: 13px;
 }

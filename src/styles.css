@@ -1,7 +1,7 @@
 body {
   margin: 50px 400px;
   font-family: "Roboto", sans-serif;
-  color: #5a6275;
+  color: #78829b;
 }
 
 h1 {
@@ -17,6 +17,11 @@ a {
 
 .card {
   width: 700px;
+  background: linear-gradient(
+    181.2deg,
+    rgb(223, 249, 253) 10.5%,
+    rgb(254, 254, 254) 86.8%
+  );
 }
 
 .location-form,

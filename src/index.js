@@ -114,3 +114,14 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("New York");
+
+function changeBackground() {
+  let now = new Date();
+  let darkMode = "linear-gradient(to right, #14252D, #003048, #004C72)";
+
+  if ((now.getHours < 6, now.getHours() > 18)) {
+    document.getElementById("card").style.backgroundImage = darkMode;
+  }
+}
+
+changeBackground();

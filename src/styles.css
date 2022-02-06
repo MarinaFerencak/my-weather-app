@@ -8,6 +8,7 @@ h1 {
   font-size: 25px;
   margin-top: 20px;
   margin-left: 60px;
+  margin-bottom: 0;
   font-weight: 700;
 }
 
@@ -80,21 +81,30 @@ a {
   margin-left: 50px;
 }
 
-.current-temperature {
+.weather-temperature {
   display: inline-block;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 85px;
-  padding: 0;
+  position: relative;
+  top: 10px;
 }
 
-.measuring-units {
-  display: inline-block;
+.weather-temperature .active {
+  color: #78829b;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+#current-temperature {
+  font-size: 40px;
+}
+
+#measuring-units {
   font-size: 15px;
   font-weight: 700;
-  line-height: 65px;
   position: relative;
-  right: 65px;
+  bottom: 18px;
 }
 
 #weather-description {

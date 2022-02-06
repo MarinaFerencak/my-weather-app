@@ -51,10 +51,10 @@ let lastUpdate = document.querySelector("#last-update");
 lastUpdate.innerHTML = currentTime;
 
 function displayWeatherCondition(response) {
+  celsiusTemperature = Math.round(response.data.main.temp);
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -102,10 +102,14 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+//
 function displayFahrenheit(event) {
   event.preventDefault();
-  let currentTemperature = document.querySelector("div.current-temperature");
-  currentTemperature.innerHTML = 48;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let temperatureElement = document.querySelector("#current-temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
@@ -113,14 +117,18 @@ fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 function displayCelsius(event) {
   event.preventDefault();
-  let currentTemperature = document.querySelector("div.current-temperature");
-  currentTemperature.innerHTML = 9;
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = celsiusTemperature;
 }
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsius);
 
-searchCity("New York");
+let celsiusTemperature = null;
+
+//
 
 function changeBackground() {
   let now = new Date();
@@ -131,4 +139,5 @@ function changeBackground() {
   }
 }
 
+searchCity("New York");
 changeBackground();

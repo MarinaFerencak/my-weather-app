@@ -61,12 +61,15 @@
                 class="main-weather-icon"
                 id="main-weather-icon"
               />
+              <div class="weather-temperature">
+                <strong id="current-temperature"></strong>
+                <span id="measuring-units">
+                  <a href="#" id="celsius" class="active">°C</a> |
+                  <a href="#" id="fahrenheit">F</a>
+                </span>
+              </div>
             </div>
-            <div class="col current-temperature" id="current-temperature"></div>
-            <div class="col measuring-units">
-              <a href="#" id="celsius">°C</a> |
-              <a href="#" id="fahrenheit">F</a>
-            </div>
+
             <div class="col-5">
               <ul class="weather-elements">
                 <li>Humidity: <span id="humidity"></span>%</li>

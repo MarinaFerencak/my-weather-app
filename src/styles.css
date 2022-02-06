@@ -94,19 +94,24 @@ a {
   font-weight: 700;
   line-height: 65px;
   position: relative;
-  right: 67px;
+  right: 65px;
 }
 
 #weather-description {
-  margin-left: 115px;
+  margin-left: 55px;
   margin-bottom: 0;
+  margin-top: 0;
   font-size: 16px;
+}
+
+#weather-description::first-letter {
+  text-transform: capitalize;
 }
 
 #last-update {
   margin-top: 0;
   font-size: 13px;
-  margin-left: 88px;
+  margin-left: 55px;
 }
 
 .weather-elements {
@@ -139,10 +144,11 @@ a {
 }
 
 .lower-temperature {
-  color: #8f9bb6;
+  color: #9fa8bd;
   margin-left: 5px;
 }
 
 .coder {
   font-size: 13px;
+  width: 700px;
 }

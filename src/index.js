@@ -60,7 +60,14 @@ function displayWeatherCondition(response) {
     response.data.wind.speed
   );
   document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
+
+  let iconElement = document.querySelector("#main-weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
@@ -117,7 +124,6 @@ searchCity("New York");
 
 function changeBackground() {
   let now = new Date();
-  let darkMode = "linear-gradient(to right, #14252D, #003048, #004C72)";
 
   if ((now.getHours < 6, now.getHours() > 19)) {
     document.getElementById("card").style.backgroundImage =

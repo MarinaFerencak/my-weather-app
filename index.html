@@ -12,119 +12,130 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="card">
       <div class="card-body" id="card">
         <div class="container">
+          <form id="city-form">
+            <div class="row">
+              <div class="col">
+                <input
+                  type="search"
+                  placeholder="Enter location"
+                  class="location-form shadow-sm"
+                  id="location-input"
+                />
+              </div>
+              <div class="col">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="search-button shadow-sm"
+                />
+              </div>
+              <div class="col-4">
+                <input
+                  type="button"
+                  value="Current"
+                  class="current-button shadow-sm"
+                  id="current-button"
+                />
+              </div>
+            </div>
+          </form>
+
+          <div id="date"></div>
+          <h1 id="city"></h1>
+
           <div class="row">
             <div class="col">
-              <form id="city-form">
-              <input
-                type="search"
-                placeholder="Enter location"
-                class="location-form shadow-sm"
-                id="location-input" 
+              <img
+                src="images/cloud.png"
+                alt="cloud icon"
+                class="main-weather-icon"
+              />
+            </div>
+            <div class="col current-temperature" id="current-temperature"></div>
+            <div class="col measuring-units">
+              <a href="#" id="celsius">°C</a> |
+              <a href="#" id="fahrenheit">F</a>
+            </div>
+            <div class="col-5">
+              <ul class="weather-elements">
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
+          <p id="weather-description"></p>
+          <div id="last-update">Last updated: 14:45</div>
+          <div class="row week-days">
+            <div class="col">Sun</div>
+            <div class="col">Mon</div>
+            <div class="col">Tue</div>
+            <div class="col">Wed</div>
+            <div class="col">Thur</div>
+          </div>
+          <div class="row icons">
+            <div class="col">
+              <img
+                src="images/cloudy with a bit of sun.png"
+                alt="clouds and sun icon"
+                class="forcast-icon"
               />
             </div>
             <div class="col">
-              <input type="submit" value="Search" class="search-button shadow-sm" />
-            </div>
-            </form>
-            <div class="col-4">
-              <input type="button" value="Current" class="current-button shadow-sm" id="current-button" />
-            </div>
-          </div>
-          <div id="date">
-          </div>
-          <h1 id="city">
-          </h1>
-          <div class="row">
-            <div class="col-7">
-          <img src="images/cloud.png" alt="cloud icon" class="main-weather-icon">
-          <div class="current-temperature" id="current-temperature">
-          </div>
-          <div class="measuring-units">
-            <a href="#" id="celsius">°C</a> | <a href="#" id="fahrenheit">F</a>
-          </div>
-          </div>
-          <div class="col-5">
-          <ul class="weather-elements">
-            <li>
-              Humidity: <span id="humidity"></span>%
-            </li>
-            <li>
-              Wind: <span id="wind"></span> km/h
-            </li>
-          </ul>
-          </div>
-          <p id="weather-description">
-          </p>
-          <div id="last-update">
-            Last updated: 14:45
-          </div>
-          <div class="row week-days">
-            <div class="col">
-              Sun
+              <img
+                src="images/cloudy with a bit of sun.png"
+                alt="clouds and sun icon"
+                class="forcast-icon"
+              />
             </div>
             <div class="col">
-              Mon
+              <img
+                src="images/cloudy with a bit of sun.png"
+                alt="clouds and sun icon"
+                class="forcast-icon"
+              />
             </div>
             <div class="col">
-              Tue
+              <img
+                src="images/cloud.png"
+                alt="cloud icon"
+                class="forcast-icon"
+              />
             </div>
             <div class="col">
-              Wed
-            </div>
-            <div class="col">
-              Thur
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <img src="images/cloudy with a bit of sun.png" alt="clouds and sun icon" class="forcast-icon">
-            </div>
-            <div class="col">
-              <img src="images/cloudy with a bit of sun.png" alt="clouds and sun icon" class="forcast-icon">
-            </div>
-            <div class="col">
-              <img src="images/cloudy with a bit of sun.png" alt="clouds and sun icon" class="forcast-icon">
-            </div>
-            <div class="col">
-              <img src="images/cloud.png" alt="cloud icon" class="forcast-icon">
-            </div>
-            <div class="col">
-              <img src="images/cloudy with a bit of sun.png" alt="clouds and sun icon" class="forcast-icon">
+              <img
+                src="images/cloudy with a bit of sun.png"
+                alt="clouds and sun icon"
+                class="forcast-icon"
+              />
             </div>
           </div>
           <div class="row forcast-temperatures">
-            <div class="col">
-              13°<span class="lower-temperature">9°</span>
-            </div>
-            <div class="col">
-              16° <span class="lower-temperature">9°</span>
-            </div>
-            <div class="col">
-              16° <span class="lower-temperature">8°</span>
-            </div>
-            <div class="col">
-              11° <span class="lower-temperature">4°</span>
-            </div>
-            <div class="col">
-              12° <span class="lower-temperature">7°</span>
-            </div>
-          </div>
-          </div>
+            <div class="col">13°<span class="lower-temperature">9°</span></div>
+            <div class="col">16° <span class="lower-temperature">9°</span></div>
+            <div class="col">16° <span class="lower-temperature">8°</span></div>
+            <div class="col">11° <span class="lower-temperature">4°</span></div>
+            <div class="col">12° <span class="lower-temperature">7°</span></div>
           </div>
         </div>
       </div>
     </div>
-    <div class=coder>
-     <a href="https://github.com/MarinaFerencak/my-weather-app" target="_blank">Open-source code</a> by Marina Ferenčak
+    <div class="coder">
+      <a href="https://github.com/MarinaFerencak/my-weather-app" target="_blank"
+        >Open-source code</a
+      >
+      by Marina Ferenčak
     </div>
     <script src="src/index.js"></script>
   </body>

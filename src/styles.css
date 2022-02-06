@@ -84,14 +84,17 @@ a {
   display: inline-block;
   font-size: 40px;
   font-weight: 700;
-  position: relative;
-  top: 15px;
+  line-height: 85px;
+  padding: 0;
 }
 
 .measuring-units {
   display: inline-block;
   font-size: 15px;
   font-weight: 700;
+  line-height: 65px;
+  position: relative;
+  right: 67px;
 }
 
 #weather-description {
@@ -107,7 +110,7 @@ a {
 }
 
 .weather-elements {
-  margin-top: 35px;
+  margin-top: 25px;
   margin-bottom: 0;
   font-size: 14px;
   list-style: none;
@@ -121,9 +124,12 @@ a {
   font-weight: bold;
 }
 
+.icons {
+  margin-left: 50px;
+}
+
 .forcast-icon {
   width: 35px;
-  margin-left: 64px;
 }
 
 .forcast-temperatures {

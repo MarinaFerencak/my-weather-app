@@ -119,8 +119,9 @@ function changeBackground() {
   let now = new Date();
   let darkMode = "linear-gradient(to right, #14252D, #003048, #004C72)";
 
-  if ((now.getHours < 6, now.getHours() > 18)) {
-    document.getElementById("card").style.backgroundImage = darkMode;
+  if ((now.getHours < 6, now.getHours() > 19)) {
+    document.getElementById("card").style.backgroundImage =
+      "linear-gradient(114.9deg, rgb(34, 34, 34) 8.3%, rgb(0, 40, 60) 41.6%, rgb(0, 65, 97) 93.4%)";
   }
 }
 

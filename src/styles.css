@@ -1,5 +1,5 @@
 body {
-  margin: 50px 400px;
+  margin: 50px 500px;
   font-family: "Roboto", sans-serif;
   color: #78829b;
 }
@@ -7,7 +7,7 @@ body {
 h1 {
   font-size: 25px;
   margin-top: 20px;
-  margin-left: 60px;
+  margin-left: 30px;
   margin-bottom: 0;
   font-weight: 700;
 }
@@ -17,7 +17,7 @@ a {
 }
 
 .card {
-  width: 700px;
+  width: 600px;
   background: linear-gradient(
     181.2deg,
     rgb(223, 249, 253) 10.5%,
@@ -39,24 +39,14 @@ a {
   position: relative;
 }
 
-.location-form {
-  margin-left: 92px;
-  left: 20px;
+.search-bar {
+  margin-left: 30px;
 }
 
-.location-form:hover {
-  cursor: text;
-}
-
-.search-button {
-  background: #1ab5ed;
-  color: white;
-}
-
+.search-button,
 .current-button {
   background: #1ab5ed;
   color: white;
-  right: 20px;
 }
 
 .search-button:hover,
@@ -64,6 +54,10 @@ a {
   border: 2px solid #1ab5ed;
   background: white;
   color: #1ab5ed;
+}
+
+.location-form:hover {
+  cursor: text;
 }
 
 .row {
@@ -78,7 +72,7 @@ a {
 
 .main-weather-icon {
   width: 80px;
-  margin-left: 50px;
+  margin-left: 18px;
 }
 
 .weather-temperature {
@@ -108,7 +102,7 @@ a {
 }
 
 #weather-description {
-  margin-left: 55px;
+  margin-left: 30px;
   margin-bottom: 0;
   margin-top: 0;
   font-size: 16px;
@@ -121,7 +115,7 @@ a {
 #last-update {
   margin-top: 0;
   font-size: 13px;
-  margin-left: 55px;
+  margin-left: 30px;
 }
 
 .weather-elements {
@@ -133,14 +127,14 @@ a {
 }
 
 .week-days {
-  margin-left: 55px;
+  margin-left: 30px;
   margin-top: 40px;
   font-size: 17px;
   font-weight: bold;
 }
 
 .icons {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .forcast-icon {
@@ -148,7 +142,7 @@ a {
 }
 
 .forcast-temperatures {
-  margin-left: 53px;
+  margin-left: 30px;
   font-size: 13px;
   font-weight: bold;
 }

@@ -1,5 +1,8 @@
 let now = new Date();
 let currentDate = now.getDate();
+if (currentDate < 9) {
+  currentDate = `0${currentDate}`;
+}
 
 let days = [
   "Sunday",
@@ -30,6 +33,7 @@ let months = [
 
 let currentMonth = months[now.getMonth()];
 let currentYear = now.getFullYear();
+
 let formattedDate = `${currentDay}, ${currentDate}.${currentMonth}.${currentYear}.`;
 
 let date = document.querySelector("#date");
@@ -102,7 +106,6 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#current-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//
 function displayFahrenheit(event) {
   event.preventDefault();
   celsiusLink.classList.remove("active");
@@ -127,8 +130,6 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsius);
 
 let celsiusTemperature = null;
-
-//
 
 function changeBackground() {
   let now = new Date();

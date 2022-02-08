@@ -7,7 +7,7 @@ body {
 h1 {
   font-size: 25px;
   margin-top: 20px;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-bottom: 0;
   font-weight: 700;
 }
@@ -43,7 +43,7 @@ a {
 }
 
 .search-bar {
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .search-button,
@@ -105,7 +105,7 @@ a {
 }
 
 #weather-description {
-  margin-left: 10px;
+  margin-left: 15px;
   margin-bottom: 0;
   margin-top: 0;
   font-size: 16px;
@@ -118,7 +118,7 @@ a {
 #last-update {
   margin-top: 0;
   font-size: 13px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 .weather-elements {
@@ -126,7 +126,6 @@ a {
   margin-bottom: 0;
   font-size: 14px;
   list-style: none;
-  margin-left: 10px;
 }
 
 .weather-forecast {

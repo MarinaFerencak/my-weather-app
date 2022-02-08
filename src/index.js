@@ -74,6 +74,33 @@ function displayWeatherCondition(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col">
+      <div class="forecast-days">${day}</div>
+      <img
+        src="images/cloudy with a bit of sun.png"
+        alt="clouds and sun icon"
+        width="35px"
+      />
+      <br />
+      <div class="forecast-temperatures">
+        13° <span class="min-temperature">9°</span>
+      </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function searchCity(city) {
   let apiKey = "8cf40dcdb2c5e54c60f4c140e9737b0e";
   let units = "metric";
@@ -140,5 +167,6 @@ function changeBackground() {
   }
 }
 
+displayForecast();
 searchCity("New York");
 changeBackground();

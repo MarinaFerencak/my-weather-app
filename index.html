@@ -49,22 +49,18 @@
               </div>
             </div>
           </form>
-          <div id="date"></div>
           <h1 id="city"></h1>
           <div class="row">
             <div class="col">
               <img
                 src=""
-                alt="cloud icon"
+                alt=""
                 class="main-weather-icon"
                 id="main-weather-icon"
               />
               <div class="weather-temperature">
                 <strong id="current-temperature"></strong>
-                <span id="measuring-units">
-                  <a href="#" id="celsius" class="active">°C</a> |
-                  <a href="#" id="fahrenheit">F</a>
-                </span>
+                <span id="measuring-unit">°C</span>
               </div>
             </div>
             <div class="col-5">
@@ -75,7 +71,7 @@
             </div>
           </div>
           <p id="weather-description"></p>
-          <div id="last-update">Last updated: 14:45</div>
+          <div id="last-update">Last updated: <span id="date"></span></div>
           <div class="weather-forecast" id="forecast"></div>
         </div>
       </div>

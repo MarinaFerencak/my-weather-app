@@ -39,7 +39,6 @@ a {
   color: #5a6275;
   transition: all 150ms ease-in-out;
   border: 2px solid #1ab5ed;
-  position: relative;
 }
 
 .search-bar {
@@ -67,15 +66,8 @@ a {
   max-width: 100%;
 }
 
-#date {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 15px;
-}
-
 .main-weather-icon {
   width: 80px;
-  margin-left: 0px;
 }
 
 .weather-temperature {
@@ -84,20 +76,11 @@ a {
   top: 10px;
 }
 
-.weather-temperature .active {
-  color: #78829b;
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  text-decoration: none;
-}
-
 #current-temperature {
   font-size: 40px;
 }
 
-#measuring-units {
+#measuring-unit {
   font-size: 15px;
   font-weight: 700;
   position: relative;
@@ -111,7 +94,7 @@ a {
   font-size: 16px;
 }
 
-#weather-description::first-letter {
+#weather-description:first-letter {
   text-transform: capitalize;
 }
 
@@ -123,13 +106,12 @@ a {
 
 .weather-elements {
   margin-top: 25px;
-  margin-bottom: 0;
   font-size: 14px;
   list-style: none;
 }
 
 .weather-forecast {
-  margin-top: 25px;
+  margin-top: 30px;
   text-align: center;
 }
 

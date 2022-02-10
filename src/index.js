@@ -129,12 +129,12 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 function changeBackground() {
   let now = new Date();
 
-  if ((now.getHours < 6, now.getHours() > 23)) {
+  if ((now.getHours < 6, now.getHours() > 19)) {
     document.getElementById("card").style.backgroundImage =
       "linear-gradient(114.9deg, rgb(34, 34, 34) 8.3%, rgb(0, 40, 60) 41.6%, rgb(0, 65, 97) 93.4%)";
     document.getElementById("card").style.borderRadius = "8px";
   }
 }
 
-searchCity("New York");
+searchCity("Paris");
 changeBackground();

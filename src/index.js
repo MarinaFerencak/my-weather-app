@@ -43,7 +43,7 @@ function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#main-weather-icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `images/${response.data.weather[0].icon}.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
@@ -73,11 +73,9 @@ function displayForecast(response) {
     <div class="col">
       <div class="forecast-days">${formatDay(forecastDay.dt)}</div>
       <img
-        src="http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
-        }@2x.png"
+        src="images/${forecastDay.weather[0].icon}.png"
         alt="${forecastDay.weather[0].description}"
-        width="50px"
+        width="40px"
       />
       <br />
       <div class="forecast-temperatures">
@@ -131,9 +129,10 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 function changeBackground() {
   let now = new Date();
 
-  if ((now.getHours < 6, now.getHours() > 19)) {
+  if ((now.getHours < 6, now.getHours() > 23)) {
     document.getElementById("card").style.backgroundImage =
       "linear-gradient(114.9deg, rgb(34, 34, 34) 8.3%, rgb(0, 40, 60) 41.6%, rgb(0, 65, 97) 93.4%)";
+    document.getElementById("card").style.borderRadius = "8px";
   }
 }
 
